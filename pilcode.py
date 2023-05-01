@@ -1,8 +1,6 @@
 from PIL import Image, ImageDraw
-from myCode import read1_function, read2_function
+from myCode import read1, read2
 
-read1 = read1_function()
-read2 = read2_function()
 im = Image.new('RGB', (500, 500), color = ('#FAACAC'))
 
 def my_pack(y=0, x=0):
@@ -10,7 +8,7 @@ def my_pack(y=0, x=0):
         draw_text = ImageDraw.Draw(im)
         draw_text.text((50,50+y*50), i, fill=('#1c0606'))
         y+=1
-    for i in read2_function():
+    for i in read2:
         draw_text = ImageDraw.Draw(im)
         draw_text.text((150,50+x*50), i, fill=('#1c0606'))
         x+=1
@@ -25,4 +23,6 @@ def line_func(im):
                     xy = ((50, 50+read1.index(i)*50), (150, 50+read2.index(j)*50))
                 )
     return im
+
+
 line_func(my_pack()).show()

@@ -5,7 +5,6 @@ def read1_function():
     f.close()
     arr = list()
     arr = j.split('\n')
-    print(arr)
     return(arr)
 
 def read2_function():
@@ -14,5 +13,7 @@ def read2_function():
     f.close()
     arr = list()
     arr = j.split('\n')
-    print(arr)
     return(arr)
+
+read1 = read1_function()
+read2 = read2_function()
