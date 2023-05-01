@@ -3,18 +3,16 @@ from myCode import read1, read2
 
 im = Image.new('RGB', (500, 500), color = ('#FAACAC'))
 
-def my_pack(y=0, x=0):
+def my_pack()->im:
     for i in read1:
         draw_text = ImageDraw.Draw(im)
-        draw_text.text((50,50+y*50), i, fill=('#1c0606'))
-        y+=1
-    for i in read2:
+        draw_text.text((50,50+read1.index(i)*50), i, fill=('#1c0606'))
+    for j in read2:
         draw_text = ImageDraw.Draw(im)
-        draw_text.text((150,50+x*50), i, fill=('#1c0606'))
-        x+=1
+        draw_text.text((150,50+read2.index(j)*50), j, fill=('#1c0606'))
     return im
 
-def line_func(im):
+def line_func(im)->im:
     draw = ImageDraw.Draw(im)
     for i in read1:
         for j in read2:
