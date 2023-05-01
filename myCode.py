@@ -4,7 +4,8 @@ def read1_function():
     j = f.read()
     f.close()
     arr = list()
-    arr = re.split('\n.', j)
+    arr = j.split('\n')
+    print(arr)
     return(arr)
 
 def read2_function():
@@ -12,5 +13,6 @@ def read2_function():
     j = f.read()
     f.close()
     arr = list()
-    arr = re.split('. \n ',j)
+    arr = j.split('\n')
+    print(arr)
     return(arr)
